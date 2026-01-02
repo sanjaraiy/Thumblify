@@ -2,6 +2,7 @@ import React from 'react'
 import { thumbnailStyles, type ThumbnailStyle } from '../assets/assets'
 import { ChevronDownIcon, CpuIcon, ImageIcon, PenToolIcon, SparkleIcon, SquareIcon } from 'lucide-react';
 
+
 const StyleSelector = ({value, onChange, isOpen, setIsOpen} : {
     value: ThumbnailStyle; 
     onChange: (style: ThumbnailStyle) => void;

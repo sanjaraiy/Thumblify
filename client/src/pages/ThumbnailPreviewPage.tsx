@@ -5,13 +5,17 @@ const ThumbnailPreviewPage = () => {
      
     const [searchParams] = useSearchParams();
     
-    const thumbnail_url = searchParams.get('thumbnail_url')
+    const thumbnail_url = searchParams.get('thumbnail_url');
     const title = searchParams.get('title');
 
     const new_html = yt_html.replace("%%THUMBNAIL_URL%%", thumbnail_url!).replace("%%TITLE%%", title!);
     
+    console.log(new_html);
+
     return (
-    <div>ThumbnailPreviewPage</div>
+    <div className="fixed inset-0 z-100 bg-black">
+        <iframe srcDoc={new_html} width="100%" height="100%" allowFullScreen></iframe>
+    </div>
   )
 }
 

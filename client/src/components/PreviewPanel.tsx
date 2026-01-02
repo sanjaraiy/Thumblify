@@ -1,4 +1,3 @@
-import React from 'react'
 import type { AspectRatio, IThumbnail } from '../assets/assets'
 import { DownloadIcon, ImageIcon, Loader2Icon } from 'lucide-react';
 

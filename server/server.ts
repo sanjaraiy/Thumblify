@@ -5,6 +5,8 @@ import connectDB from './config/db.js';
 import session from 'express-session';
 import MongoStore from 'connect-mongo'
 import AuthRouter from './routes/AuthRoutes.js';
+import ThumbnailRouter from './routes/ThumbnailRoutes.js';
+import UserRouter from './routes/UserRoutes.js';
 
 
 declare module 'express-session' {
@@ -45,6 +47,8 @@ app.use(express.json());
 
 
 app.use('/api/v1/auth', AuthRouter);
+app.use('/api/v1/thumbnail', ThumbnailRouter);
+app.use('/api/v1/user', UserRouter);
 
 
 app.get('/', (req: Request, res: Response) => {
